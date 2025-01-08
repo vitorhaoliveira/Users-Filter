@@ -1,0 +1,41 @@
+<div class="filter">
+  <form class="form">
+    <div class="form-input">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ex. Vitor Hugo" value="" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-date-picker">
+      <mat-form-field>
+        <mat-label>Escolha a data</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" />
+          <input matEndDate placeholder="End date" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY - MM/DD/YYYY </mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <div class="form-status">
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-button">
+      <button mat-raised-button>Filtrar</button>
+    </div>
+  </form>
+</div>
