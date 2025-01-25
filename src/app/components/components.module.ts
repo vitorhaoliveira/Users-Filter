@@ -19,7 +19,7 @@ import { PipesModule } from "../pipes/pipes.module";
         AngularMaterialModule,
         FormsModule,    
         CommonModule,
-        PipesModule
+        PipesModule,
     ],
     exports: [
         UserDetailsComponent,

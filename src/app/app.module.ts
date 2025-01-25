@@ -10,7 +10,6 @@ import { AddressPipe } from './pipes/address.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    AddressPipe
   ],
   imports: [
     BrowserModule,
