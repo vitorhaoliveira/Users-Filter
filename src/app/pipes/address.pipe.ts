@@ -18,5 +18,6 @@ export class AddressPipe implements PipeTransform {
       return 'Endereço indisponível ou inválido';
     }
     return `${address.rua}, ${address.numero}, ${address.cidade}, ${address.estado}`;
+
   }
 }
